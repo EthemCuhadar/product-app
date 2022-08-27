@@ -1,0 +1,17 @@
+version: "3"
+
+tasks:
+    default:
+    start-server:
+        desc: Start the server
+        cmds:
+        - go run ./server/main.go
+    start-client:
+        desc: Start the client
+        dir: ./client
+        cmds:
+        - npm start
+    test:
+        desc: Run tests
+        cmds:
+        - go test ./...
